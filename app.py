@@ -11,13 +11,10 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 
 
-@st.cache_resource()
+@st.cache_resource
 def carrega_modelo():
     url = 'https://drive.google.com/uc?id=1fK7AzTBTzT7UKfbE0PJEk9rWOrmwWqhD'
-    # response = requests.get(url)
-    # response.raise_for_status()  # Lança uma exceção em caso de erro de download
-    # with open('modelo_quantizado.tflite', 'wb') as f:
-    #     f.write(response.content)
+    
     gdown.download(url,'modelo_quantizado.tflite')
     interpreter = tf.lite.Interpreter(model_path='modelo_quantizado.tflite')
     interpreter.allocate_tensors()
