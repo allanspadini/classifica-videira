@@ -1,5 +1,5 @@
 # Usar uma imagem base oficial do Python com suporte ao TensorFlow
-FROM tensorflow/tensorflow:2.15.0
+FROM python:3.9.18
 
 WORKDIR /app
 
