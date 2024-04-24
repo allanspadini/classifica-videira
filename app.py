@@ -72,8 +72,9 @@ def main():
         page_title="Classifica Folhas de Videira",
         page_icon="🍇",
     )
-    st.write(f'tensorflow: {tf.__version__}')
+    
     st.write("# Classifica Folhas de Videira! 🍇")
+    st.write(f'tensorflow: {tf.__version__}')
 
     interpreter = carrega_modelo()
 
