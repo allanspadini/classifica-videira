@@ -8,7 +8,7 @@ import gdown
 import plotly.express as px
 
 
-@st.cache_resource(allow_output_mutation=True)
+@st.cache_resource()
 def carrega_modelo():
     url = 'https://drive.google.com/uc?id=1fK7AzTBTzT7UKfbE0PJEk9rWOrmwWqhD'
     # response = requests.get(url)
