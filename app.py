@@ -11,7 +11,7 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 
 
-#@st.cache_resource
+@st.cache_resource
 def carrega_modelo():
     url = 'https://drive.google.com/uc?id=1fK7AzTBTzT7UKfbE0PJEk9rWOrmwWqhD'
     
