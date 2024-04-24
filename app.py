@@ -6,8 +6,8 @@ import pandas as pd
 import io
 import gdown
 import plotly.express as px
-import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
+
 
 
 
