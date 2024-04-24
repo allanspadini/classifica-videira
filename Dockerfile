@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 RUN git clone https://github.com/allanspadini/classifica-videira.git .
 
 # Instalar dependências Python do projeto
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Expõe a porta 8501 usada pelo Streamlit
 EXPOSE 8501
