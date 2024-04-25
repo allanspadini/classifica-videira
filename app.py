@@ -13,10 +13,10 @@ import plotly.express as px
 
 @st.cache_resource
 def carrega_modelo():
-    url = 'https://drive.google.com/uc?id=1fK7AzTBTzT7UKfbE0PJEk9rWOrmwWqhD'
+    url = 'https://drive.google.com/file/d/1VPpwl8cagLfP8j6smglsCrarV0l82Jkh'
     
     gdown.download(url,'modelo_quantizado.tflite')
-    interpreter = tf.lite.Interpreter(model_path='modelo_quantizado.tflite')
+    interpreter = tf.lite.Interpreter(model_path='modelo_quantizado16bits.tflite')
     interpreter.allocate_tensors()
 
     
@@ -74,7 +74,7 @@ def main():
     )
     
     st.write("# Classifica Folhas de Videira! 🍇")
-    st.write(f'tensorflow: {tf.__version__}')
+    
 
     interpreter = carrega_modelo()
 
